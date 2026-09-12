@@ -9,7 +9,6 @@
 <link rel="stylesheet" th:href="@{/css/login.css}">
 </head>
 <body>
-  <!-- El logo regresa directamente a la cartelera principal. -->
   <div class="login-menu">
     <a class="logo-menu-button" href="/cartelera" aria-label="Volver a la cartelera principal">
       <span class="logo-ticket">TC</span>
@@ -46,7 +45,6 @@
         <button class="tab" id="tab-register" role="tab" aria-selected="false" aria-controls="panel-register" onclick="showPanel('register')">Crear cuenta</button>
       </div>
 
-      <!-- LOGIN -->
       <form class="panel active" id="panel-login" role="tabpanel" aria-labelledby="tab-login"
             th:action="@{/login}" method="post" novalidate onsubmit="return handleSubmit(event,'login')">
         <h2>Bienvenido de vuelta</h2>
@@ -71,10 +69,11 @@
 
         <button type="submit" class="btn-primary">Ingresar</button>
 
+        <a class="admin-access" href="/admin">Ir al panel administrativo</a>
+
         <p class="switch-line">¿Primera vez en Cine Amazonas? <a href="#" class="link" onclick="showPanel('register');return false;">Crea tu cuenta</a></p>
       </form>
 
-      <!-- REGISTRO -->
       <form class="panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register"
             th:action="@{/registro}" method="post" novalidate onsubmit="return handleSubmit(event,'register')">
         <h2>Crea tu cuenta</h2>

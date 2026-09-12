@@ -18,7 +18,6 @@ body {
     font-family: "Manrope", Arial, sans-serif;
 }
 
-/* Cabecera compartida por cartelera, promociones, tickets y contacto. */
 .site-header {
     background: rgba(20, 16, 26, .97);
     border-bottom: 1px solid var(--border-subtle);
@@ -127,7 +126,6 @@ main {
     margin: 15px 0 0;
 }
 
-/* Cada película se presenta como un recuadro independiente y redondeado. */
 .movie-grid {
     display: grid;
     gap: 22px;
@@ -238,7 +236,6 @@ main {
 }
 .showtime button:hover { background: var(--accent-hover); }
 
-/* Contenedores de las demás vistas, usando la misma guía del login. */
 .legacy-page > p { margin-bottom: 28px; }
 .legacy-page section {
     background: var(--bg-panel);
