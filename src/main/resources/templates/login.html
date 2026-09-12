@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TicketCine — Ingresar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+  <!-- El logo regresa directamente a la cartelera principal. -->
+  <div class="login-menu">
+    <a class="logo-menu-button" href="/cartelera" aria-label="Volver a la cartelera principal">
+      <span class="logo-ticket">TC</span>
+      <span>TicketCine<small>Cine Amazonas</small></span>
+    </a>
+  </div>
+<div class="stage">
+
+  <section class="marquee">
+    <div class="filmstrip left"></div>
+    <div class="filmstrip right"></div>
+
+    <div class="brand">
+      <span class="mark"></span>
+      <span>CINE AMAZONAS · IQUITOS</span>
+    </div>
+
+    <div class="hero-copy">
+      <h1>Tu asiento<br>te espera<em>.</em></h1>
+      <p>Compra tu entrada en línea y recibe un ticket con tu número de turno. Al llegar a sala, eliges libremente dónde sentarte.</p>
+    </div>
+
+    <div class="showtimes">
+      <div class="row"><span>Función más próxima</span><b>Hoy · 8:15 pm</b></div>
+      <div class="row"><span>Sala</span><b>Sala 2</b></div>
+      <div class="ticket-stub">Turno de ingreso asignado al confirmar tu compra · N.º <b>#014</b></div>
+    </div>
+  </section>
+
+  <section class="auth-side">
+    <div class="card">
+      <div class="tabs" role="tablist" aria-label="Acceso a tu cuenta">
+        <button class="tab active" id="tab-login" role="tab" aria-selected="true" aria-controls="panel-login" onclick="showPanel('login')">Ingresar</button>
+        <button class="tab" id="tab-register" role="tab" aria-selected="false" aria-controls="panel-register" onclick="showPanel('register')">Crear cuenta</button>
+      </div>
+
+      <!-- LOGIN -->
+      <form class="panel active" id="panel-login" role="tabpanel" aria-labelledby="tab-login"
+            th:action="@{/login}" method="post" novalidate onsubmit="return handleSubmit(event,'login')">
+        <h2>Bienvenido de vuelta</h2>
+        <p class="sub">Ingresa con tu correo para ver tu cartelera y tus tickets.</p>
+
+        <div class="field" id="login-email-field">
+          <label for="login-email">Correo electrónico</label>
+          <input type="email" id="login-email" name="email" placeholder="tu@correo.com" autocomplete="email">
+          <div class="field-error">Ingresa un correo válido para continuar.</div>
+        </div>
+
+        <div class="field" id="login-password-field">
+          <label for="login-password">Contraseña</label>
+          <input type="password" id="login-password" name="password" placeholder="••••••••" autocomplete="current-password">
+          <div class="field-error">Ingresa tu contraseña.</div>
+        </div>
+
+        <div class="row-between">
+          <label class="remember"><input type="checkbox" name="remember"> Mantener sesión iniciada</label>
+          <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button type="submit" class="btn-primary">Ingresar</button>
+
+        <p class="switch-line">¿Primera vez en Cine Amazonas? <a href="#" class="link" onclick="showPanel('register');return false;">Crea tu cuenta</a></p>
+      </form>
+
+      <!-- REGISTRO -->
+      <form class="panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register"
+            th:action="@{/registro}" method="post" novalidate onsubmit="return handleSubmit(event,'register')">
+        <h2>Crea tu cuenta</h2>
+        <p class="sub">Regístrate para comprar entradas y guardar tu historial.</p>
+
+        <div class="field" id="reg-name-field">
+          <label for="reg-name">Nombre completo</label>
+          <input type="text" id="reg-name" name="nombre" placeholder="Nombre y apellido" autocomplete="name">
+          <div class="field-error">Cuéntanos cómo te llamas.</div>
+        </div>
+
+        <div class="field" id="reg-email-field">
+          <label for="reg-email">Correo electrónico</label>
+          <input type="email" id="reg-email" name="email" placeholder="tu@correo.com" autocomplete="email">
+          <div class="field-error">Ingresa un correo válido.</div>
+        </div>
+
+        <div class="field" id="reg-password-field">
+          <label for="reg-password">Contraseña</label>
+          <input type="password" id="reg-password" name="password" placeholder="Mínimo 8 caracteres" autocomplete="new-password">
+          <div class="field-error">La contraseña debe tener al menos 8 caracteres.</div>
+        </div>
+
+        <div class="field" id="reg-confirm-field">
+          <label for="reg-confirm">Confirmar contraseña</label>
+          <input type="password" id="reg-confirm" name="confirmPassword" placeholder="Repite tu contraseña" autocomplete="new-password">
+          <div class="field-error">Las contraseñas no coinciden.</div>
+        </div>
+
+        <button type="submit" class="btn-primary">Crear cuenta</button>
+
+        <p class="switch-line">¿Ya tienes cuenta? <a href="#" class="link" onclick="showPanel('login');return false;">Ingresa aquí</a></p>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+<script th:src="@{/js/login.js}"></script>
+</body>
+</html>

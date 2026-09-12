@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketCine | Cartelera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/cartelera.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="site-brand" href="/cartelera" aria-label="Ir a la cartelera de TicketCine">
+        <span class="brand-ticket">TC</span>
+        <span><strong>TicketCine</strong><small>Cine Amazonas</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+        <a class="active" href="/cartelera" aria-current="page">Cartelera</a>
+        <a href="/publicidad">Promociones</a>
+        <a href="/mis-tickets">Mis tickets</a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+    <a class="login-link" href="/login">Iniciar sesión</a>
+</header>
+
+<main>
+    <section class="billboard" aria-labelledby="page-title">
+        <p class="eyebrow">Cine Amazonas · Iquitos</p>
+        <h1 id="page-title">Cartelera</h1>
+        <p>Películas y horarios para disfrutar hoy en el cine.</p>
+    </section>
+
+    <section class="movie-grid" aria-label="Películas disponibles">
+        <article class="movie-card avatar-card">
+            <div class="movie-poster" aria-hidden="true"><span>AVATAR</span><small>Fuego y ceniza</small></div>
+            <div class="movie-content">
+                <div class="movie-heading"><h2>Avatar: Fuego y Ceniza</h2><span class="rating">+14</span></div>
+                <p class="movie-meta">Ciencia ficción · 190 min</p>
+                <p class="synopsis">Una nueva aventura en el mundo de Pandora.</p>
+                <h3>Funciones disponibles</h3>
+                <div class="showtime"><span>Sala 1</span><strong>3:00 PM</strong><span>S/ 15.00</span><button type="button">Comprar entrada</button></div>
+                <div class="showtime"><span>Sala 1</span><strong>7:00 PM</strong><span>S/ 15.00</span><button type="button">Comprar entrada</button></div>
+            </div>
+        </article>
+
+        <article class="movie-card mario-card">
+            <div class="movie-poster" aria-hidden="true"><span>SUPER</span><small>Mario Bros.</small></div>
+            <div class="movie-content">
+                <div class="movie-heading"><h2>Super Mario Bros</h2><span class="rating all">ATP</span></div>
+                <p class="movie-meta">Animación · 92 min</p>
+                <p class="synopsis">Mario y Luigi viven una gran aventura para salvar el Reino Champiñón.</p>
+                <h3>Funciones disponibles</h3>
+                <div class="showtime"><span>Sala 2</span><strong>2:00 PM</strong><span>S/ 12.00</span><button type="button">Comprar entrada</button></div>
+                <div class="showtime"><span>Sala 2</span><strong>5:00 PM</strong><span>S/ 12.00</span><button type="button">Comprar entrada</button></div>
+            </div>
+        </article>
+
+        <article class="movie-card spider-card">
+            <div class="movie-poster" aria-hidden="true"><span>SPIDER</span><small>Man</small></div>
+            <div class="movie-content">
+                <div class="movie-heading"><h2>Spider-Man</h2><span class="rating">+14</span></div>
+                <p class="movie-meta">Acción · 148 min</p>
+                <p class="synopsis">Spider-Man deberá enfrentarse a nuevos enemigos para proteger su ciudad.</p>
+                <h3>Funciones disponibles</h3>
+                <div class="showtime"><span>Sala 3</span><strong>4:00 PM</strong><span>S/ 15.00</span><button type="button">Comprar entrada</button></div>
+                <div class="showtime"><span>Sala 3</span><strong>8:00 PM</strong><span>S/ 15.00</span><button type="button">Comprar entrada</button></div>
+            </div>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <strong>TicketCine</strong><span>Cine Amazonas · Iquitos</span><span>© 2026</span>
+</footer>
+</body>
+</html>

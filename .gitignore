@@ -1,0 +1,12 @@
+# Archivos generados por Maven
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Registros
+*.log
