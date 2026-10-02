@@ -12,10 +12,11 @@
     </parent>
 
     <groupId>com.cineamazonas</groupId>
-    <artifactId>ticketcine</artifactId>
+    <artifactId>cine-amazonas</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ticketcine</name>
-    <description>TicketCine - Sistema de venta de entradas de cine (Cine Amazonas)</description>
+    <packaging>war</packaging>
+    <name>Cine Amazonas</name>
+    <description>Cine Amazonas - Sistema de venta de entradas de cine (Cine Amazonas)</description>
 
     <properties>
         <java.version>17</java.version>
@@ -28,14 +29,25 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
             <scope>runtime</scope>
-            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet.jsp.jstl</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
         </dependency>
 
         <dependency>
@@ -46,6 +58,7 @@
     </dependencies>
 
     <build>
+        <finalName>cine-amazonas</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

@@ -236,8 +236,12 @@ body{
   transition:background .15s;
 }
 .btn-primary:hover{background:#f0b358;}
-.admin-access{
+.guest-access{
   display:block;
+  width:100%;
+  background:transparent;
+  cursor:pointer;
+  font-family:inherit;
   margin-top:14px;
   padding:11px 14px;
   border:1px solid var(--border-subtle);
@@ -248,7 +252,7 @@ body{
   text-align:center;
   text-decoration:none;
 }
-.admin-access:hover{border-color:var(--accent);color:var(--accent);}
+.guest-access:hover{border-color:var(--accent);color:var(--accent);}
 .btn-primary:focus-visible,
 .tab:focus-visible,
 .field input:focus-visible{

@@ -19,6 +19,7 @@ body{background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;m
 .admin-user{align-items:center;display:flex;gap:10px}
 .admin-user>span{align-items:center;background:var(--velvet);border-radius:50%;display:flex;font-weight:700;height:38px;justify-content:center;width:38px}
 .admin-user strong,.admin-user small{display:block}.admin-user strong{font-size:.82rem}.admin-user small{color:var(--muted);font-size:.7rem;margin-top:3px}
+.admin-user{margin-left:auto}.admin-logout{margin-left:14px}.admin-logout button{cursor:pointer}
 .admin-section{margin-bottom:48px;scroll-margin-top:24px}
 .section-title{align-items:end;display:flex;justify-content:space-between;margin-bottom:18px}
 .section-title h2{font-size:1.35rem;margin:0}.section-title>span{color:var(--muted);font-size:.72rem}
